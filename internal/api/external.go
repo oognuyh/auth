@@ -552,6 +552,8 @@ func (a *API) Provider(ctx context.Context, name string, scopes string) (provide
 		return provider.NewLinkedinProvider(config.External.Linkedin, scopes)
 	case "linkedin_oidc":
 		return provider.NewLinkedinOIDCProvider(config.External.LinkedinOIDC, scopes)
+	case "naver":
+		return provider.NewNaverProvider(config.External.Naver, scopes)
 	case "notion":
 		return provider.NewNotionProvider(config.External.Notion)
 	case "spotify":
